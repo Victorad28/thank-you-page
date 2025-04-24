@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Purchase is Confirmed! | [Product Name]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Thank You!</h1>
+            <p>Your <strong>[Product Name]</strong> is ready to download.</p>
+        </div>
+        
+        <!-- DOWNLOAD SECTION -->
+        <div class="download-box">
+            <a href="https://selar.co/downloads/YOUR_PRODUCT_ID" 
+               class="download-btn" 
+               id="download-link">
+               📥 Download Now (PDF, 5.2MB)
+            </a>
+            <p class="note">Link expires in 24 hours</p>
+        </div>
+
+        <!-- UPSELL (OPTIONAL) -->
+        <div class="upsell">
+            <h3>🔍 Readers Also Bought:</h3>
+            <a href="https://selar.co/UPSELL_PRODUCT_ID" class="cta-secondary">
+                Get the Video Guide (+$7)
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Auto-add order ID from Selar's redirect
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('order_id');
+        
+        if(orderId) {
+            document.getElementById('download-link').href += `?order_id=${orderId}`;
+        }
+    </script>
+</body>
+</html>
