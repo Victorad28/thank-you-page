@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    text-align: center;
+    padding: 50px 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.download-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.cta-secondary {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.note {
+    font-size: 0.9em;
+    color: #666;
+}
